@@ -7,7 +7,7 @@ data:
   SIP_BANCO_NOME: {{ .Values.sei.SIP_BANCO_NOME }}
   SEI_BANCO_USUARIO: {{ .Values.sei.SIP_BANCO_USUARIO }}
   BASE_UPDATE_WEB_SERVICE: {{ .Values.sei.BASE_UPDATE_WEB_SERVICE }}
-  SIP_BANCO_USUARIO: {{ Values.sei.SIP_BANCO_USUARIO }}
+  SIP_BANCO_USUARIO: {{ .Values.sei.SIP_BANCO_USUARIO }}
   SEI_BANCO_NOME: {{ .Values.sei.SEI_BANCO_NOME }}
   SEI_URL: {{ .Values.sei.SEI_URL }}
   SIP_WSDL: {{ .Values.sei.SIP_WSDL }}
