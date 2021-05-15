@@ -4,10 +4,10 @@
 
 jod:
   name: jod-converter
-  image: seikubernetes/alpine-sei-jodconverter
+  image: seikubernetes/sei-jodconverter
   tag: latest
 
 solr:
   name: sei-solr
-  image: seikubernetes/
-  tag: 
+  image: seikubernetes/sei-solr
+  tag: latest
