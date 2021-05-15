@@ -12,28 +12,40 @@ solr:
   image: seikubernetes/sei-solr
   tag: latest
 
+mysql:
+  name: sei-mysql
+  image: seikubernetes/sei-mysql
+  tag: latest
 
+apache:
+  name: sei-apache
+  image: seikubernetes/sei
+  tag: latest
 
 sei:
-  BASE_UPDATE_DESCRICAO: '''Tribunal de Justica de Pernambuco'''
-  SIP_BANCO_NOME: sip
-  SEI_BANCO_USUARIO: sei
-  BASE_UPDATE_WEB_SERVICE: '''https://sei.app.tjpe.jus.br/sei/controlador_ws.php?servico=sip'''
-  SIP_BANCO_USUARIO: sip
-  SEI_BANCO_NOME: sei
-  SEI_URL: 'https://sei-gedai.app.tjpe.gov.br/sei'
-  SIP_WSDL: 'https://sei-gedai.app.tjpe.gov.br/sip/controlador_ws.php?servico=wsdl'
-  SIP_URL: 'https://sei-gedai.app.tjpe.gov.br/sip'
-  SOLR_SERVIDOR: 'http://solr:8983/solr'
-  JODCONVERTER_SERVIDOR: 'http://jodconverter:8080/converter/service'
-  SIP_PAGINA_LOGIN: 'https://sei-gedai.app.tjpe.gov.br/sip/login.php'
-  EMAIL_SERVIDOR: shaplzimbra02.tjpe.gov.br
-  BANCO_SERVIDOR: mysql
-  SIP_PRODUCAO: 'false'
-  SEI_REPOSITORIO_ARQUIVOS: /sistemas/sei/homologacao
-  SEI_PRODUCAO: 'false'
-  BASE_UPDATE_PAGINA_INICIAL_SEI: '''https://sei-gedai.app.tjpe.gov.br/sei/inicializar.php'''
-  BANCO_PORTA: '3306'
-  SEI_NOME_SISTEMA_COMPLETO: 'ATENCAO: AMBIENTE DE HOMOLOGACAO!'
-  BASE_UPDATE_SIGLA: '''TJPE'''
-  BASE_UPDATE_PAGINA_INICIAL_SIP: '''https://sei-gedai.app.tjpe.gov.br/sip'''
+  BASE_UPDATE_DESCRICAO: "'NOME DO ORGAO PUBLICO'"
+  SIP_BANCO_NOME: "'sip'"
+  SEI_BANCO_USUARIO: "'sei'"
+  BASE_UPDATE_WEB_SERVICE: "'https://sei.dominio.local/sei/controlador_ws.php?servico=sip'"
+  SIP_BANCO_USUARIO: "'sip'"
+  SEI_BANCO_NOME: "'sei'"
+  SEI_URL: "'https://sei.dominio.local/sei'"
+  SIP_WSDL: "'https://sei.dominio.local/sip/controlador_ws.php?servico=wsdl'"
+  SIP_URL: "'https://sei.dominio.local/sip'"
+  SOLR_SERVIDOR: "'http://solr:8983/solr'"
+  JODCONVERTER_SERVIDOR: "'http://jodconverter:8080/converter/service'"
+  SIP_PAGINA_LOGIN: "'https://sei.dominio.local/sip/login.php'"
+  EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
+  BANCO_SERVIDOR: "'mysql'"
+  SIP_PRODUCAO: "'false'"
+  SEI_REPOSITORIO_ARQUIVOS: "'/sistemas/sei/homologacao'"
+  SEI_PRODUCAO: "'false'"
+  BASE_UPDATE_PAGINA_INICIAL_SEI: "'https://sei.dominio.local/sei/inicializar.php'"
+  BANCO_PORTA: "'3306'"
+  SEI_NOME_SISTEMA_COMPLETO: "'ATENCAO - AMBIENTE DE HOMOLOGACAO!'"
+  BASE_UPDATE_SIGLA: "'TJPE'"
+  BASE_UPDATE_PAGINA_INICIAL_SIP: "'https://sei.dominio.local/sip'"
+  #SENHA DEVE ESTAR EM BASE64
+  SEI_BANCO_SENHA: 'c2Vp'
+  #SENHA DEVE ESTAR EM BASE64
+  SIP_BANCO_SENHA: 'c2Vp'
