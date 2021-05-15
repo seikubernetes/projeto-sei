@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.solr.name }}
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.solr.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  ports:
+    - name: 8983-tcp
+      protocol: TCP
+      port: 8983
+      targetPort: 8983
+  selector:
+    app: {{ .Release.Name }}-{{ .Values.solr.name }}
+    deployment: {{ .Values.solr.name }}

@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-{{ .Release.Name }}-{{ .Values.solr.volume.name }}
+  namespace: {{ .Values.namespace.name }}
+  finalizers:
+    - kubernetes.io/pvc-protection
+spec:
+  accessModes:
+    - {{ .Values.solr.volume.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.solr.volume.size }}
+  volumeMode: Filesystem

@@ -1,7 +1,9 @@
 # Default values for sei.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+
 namespace:
+  # O NAMESPACE DEVE SER CRIADO ANTES DE RODAR O HELM INSTALL
   name: upe-homologacao-sei
 
 jod:
@@ -13,6 +15,11 @@ solr:
   name: seisolr
   image: seikubernetes/sei-solr
   tag: latest
+  volume: 
+    name: volume-solr
+    mount: /dados
+    size: 1Gi
+    accessMode: ReadWriteOnce
 
 mysql:
   name: seimysql

@@ -1,25 +1,25 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: {{ .Values.jod.name }}
+  name: {{ .Release.Name }}-{{ .Values.jod.name }}
   namespace: {{.Values.namespace.name}}
   labels:
-    app: {{ .Values.jod.name }}
+    app: {{ .Release.Name }}-{{ .Values.jod.name }}
     appglobal: {{ .Release.Name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.jod.name }}
+      app: {{ .Release.Name }}-{{ .Values.jod.name }}
       deployment: {{ .Values.jod.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.jod.name }}
+        app: {{ .Release.Name }}-{{ .Values.jod.name }}
         deployment: {{ .Values.jod.name }}
     spec:
       containers:
-        - name: {{ .Values.jod.name }}
+        - name: {{ .Release.Name }}-{{ .Values.jod.name }}
           image:  {{ .Values.jod.image }}
           ports:
             - containerPort: 8080

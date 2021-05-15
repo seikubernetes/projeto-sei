@@ -1,0 +1,35 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.solr.name }}
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.solr.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-{{ .Values.solr.name }}
+      deployment: {{ .Values.solr.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-{{ .Values.solr.name }}
+        deployment: {{ .Values.solr.name }}
+    spec:
+      volumes:
+        - name: pvc-{{ .Release.Name }}-{{ .Values.solr.volume.name }}
+          persistentVolumeClaim:
+            claimName: pvc-{{ .Release.Name }}-{{ .Values.solr.volume.name }}
+      containers:
+        - name: {{ .Release.Name }}-{{ .Values.solr.name }}
+          image: {{ .Values.solr.image }}
+          ports:
+            - containerPort: 8983
+              protocol: TCP
+          resources: {}
+          volumeMounts:
+            - name: pvc-{{ .Release.Name }}-{{ .Values.solr.volume.name }}
+              mountPath: {{ .Values.solr.volume.mount }}
+      restartPolicy: Always

@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ .Values.jod.name }}
+  name: {{ .Release.Name }}-{{ .Values.jod.name }}
   namespace: {{.Values.namespace.name}}
   labels:
-    app: {{ .Values.jod.name }}
+    app: {{ .Release.Name }}-{{ .Values.jod.name }}
     appglobal: {{ .Release.Name }}
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: {{ .Values.jod.name }}
+    app: {{ .Release.Name }}-{{ .Values.jod.name }}
     deployment: {{ .Values.jod.name }}
