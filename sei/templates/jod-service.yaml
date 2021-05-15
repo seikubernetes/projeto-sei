@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Values.jod.name }}
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Values.jod.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: {{ .Values.jod.name }}
+    deployment: {{ .Values.jod.name }}

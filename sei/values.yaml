@@ -1,24 +1,26 @@
 # Default values for sei.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+namespace:
+  name: upe-homologacao-sei
 
 jod:
-  name: jod-converter
+  name: jodconverter
   image: seikubernetes/sei-jodconverter
   tag: latest
 
 solr:
-  name: sei-solr
+  name: seisolr
   image: seikubernetes/sei-solr
   tag: latest
 
 mysql:
-  name: sei-mysql
+  name: seimysql
   image: seikubernetes/sei-mysql
   tag: latest
 
 apache:
-  name: sei-apache
+  name: seiapache
   image: seikubernetes/sei
   tag: latest
 

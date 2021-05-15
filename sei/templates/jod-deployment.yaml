@@ -2,6 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: {{ .Values.jod.name }}
+  namespace: {{.Values.namespace.name}}
   labels:
     app: {{ .Values.jod.name }}
     appglobal: {{ .Release.Name }}
@@ -11,6 +12,11 @@ spec:
     matchLabels:
       app: {{ .Values.jod.name }}
       deployment: {{ .Values.jod.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.jod.name }}
+        deployment: {{ .Values.jod.name }}
     spec:
       containers:
         - name: {{ .Values.jod.name }}
