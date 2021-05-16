@@ -107,7 +107,7 @@ A arquitetura do projeto SEI Kubernetes é composta pelos seguintes containers:<
 
 ### Pré-requisitos
 
-O helm deve ser instalado:
+O Helm deve ser instalado:
 * Helm
   ```sh
    $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
@@ -152,11 +152,11 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    ```sh
    helm uninstall projeto-sei
    ```
-4. Caso não lembre o nome do Helm do sei instalado execute:
+4. Caso não lembre o nome do Helm do SEI instalado execute:
    ```sh
    helm list
    ```
-5. *Caso não apareça o helm criado e se o namespace tenha sido criado conforme recomendado, pode-se apagar o namespace e os recursos criados dentro dele irão ser apagados também:
+5. *Caso não apareça o Helm criado e se o namespace tenha sido criado conforme recomendado, pode-se apagar o namespace e os recursos criados dentro dele irão ser apagados também:
    ```sh
    kubectl delete namespace projeto-sei
    ```
