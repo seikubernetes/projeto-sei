@@ -105,7 +105,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
 * [sei-jodconverter](https://hub.docker.com/r/seikubernetes/sei-jodconverter)
 * [sei-solr](https://hub.docker.com/r/seikubernetes/sei-solr)
 * [sei-mysql](https://hub.docker.com/r/seikubernetes/sei-mysql)
-* [sei](https://hub.docker.com/r/seikubernetes/sei)
+* [sei-apache](https://hub.docker.com/r/seikubernetes/sei-apache)
 
 ## Instalação <a name="Instalação"></a>
 
