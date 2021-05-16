@@ -14,7 +14,7 @@
   <h3 align="center">SEI - KUBERNETES</h3>
 
   <p align="center">
-    Padronização de implantação de sistema eletrônico de informações e gestão de documentos (SEI) em PaaS Kubernetes públicas e privadas.
+    Padronização de implantação de Sistema Eletrônico de Informações e Gestão de Documentos (SEI) em PaaS Kubernetes públicas e privadas.
     <br />
     <a href="https://github.com/seikubernetes/projeto-sei"><strong>Explore»</strong></a>
     <br />
@@ -34,14 +34,15 @@
     <li>
       <a href="#Sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#Contruído-com">Contruído com</a></li>
+        <li><a href="#Tecnologias-utilizadas">Tecnologias utilizadas</a></li>
       </ul>
     </li>
     <li>
       <a href="#Começando">Começando</a>
       <ul>
         <li><a href="#arquitetura">Arquitetura</a></li>
-        <li><a href="#prerequisites">Prerequisitos</a></li>
+        <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#imagens">Imagens</a></li>
         <li><a href="#instalação">Instalação</a></li>
         <li><a href="#desinstalação">Desinstalação</a></li>
       </ul>
@@ -70,32 +71,38 @@ O Sistema Eletrônico de Informações (SEI), desenvolvido pelo Tribunal Regiona
 
 O projeto atual visa permitir a instalação de um ambiente completo do SEI em Kubernetes via Helm.
 
-### Contruído com
+### Tecnologias utilizadas
 
 Para a implantação do projeto é necessário o uso do Helm e do git.
-* [helm](https://helm.sh/)
-* [git](https://github.com/)
+* [Helm](https://helm.sh/)
+* [Git](https://github.com/)
+* [Mysql](https://www.mysql.com/)
+* [Apache](https://httpd.apache.org/)
+* [Php](https://www.php.net/)
+* [Jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
+* [Memcached](https://memcached.org/)
+* [Solr](https://solr.apache.org/)
+* [Docker](https://www.docker.com/)
+* [Podman](https://podman.io/)
+* [Alpine](https://alpinelinux.org/)
 
 <!-- Começando -->
 ## Começando
 
-Nesta sessão iremos demostrar como a instalação e a desinstalação do ambiente deve ser realizada.
+Nesta sessão iremos demostrar a arquitetura e informações a respeito de instalação e desinstalação do ambiente deve ser realizada.
 
 ### Arquitetura
 
-A arquitetura do projeto SeiKubernetes é composta por 4 containers.
-um Banco de dados mysql, um servidor jodconverter, um servidor apache+php+memcache e um servidor solr
+A arquitetura do projeto SeiKubernetes é composta pelos seguintes containers:<br>
+* Banco de dados Mysql
+* Serviço Jodconverter
+* Serviço Web Apache+PHP+Memcached
+* Serviço de indexação Solr
 
 [![SeiKubernetes][project-screenshot]](https://drive.google.com/file/d/1MfvLN3vewDgHmu3Ri0z0jAxEmdpiLMup/view?usp=sharing)
 
-* [mysql](https://www.mysql.com/)
-* [apache](https://httpd.apache.org/)
-* [php](https://www.php.net/)
-* [jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
-* [memcache](https://memcached.org/)
-* [solr](https://solr.apache.org/)
 
-### Prerequisitos
+### Pré-requisitos
 
 O helm deve ser instalado:
 * helm
@@ -104,6 +111,15 @@ O helm deve ser instalado:
    $ chmod 700 get_helm.sh
    $ ./get_helm.sh
   ```
+
+### Imagens
+
+Todas as imagens foram construídas utilizando como imagem base o projeto Alpinelinux:
+
+* [sei-jodconverter](https://hub.docker.com/r/seikubernetes/sei-jodconverter)
+* [sei-solr](https://hub.docker.com/r/seikubernetes/sei-solr)
+* [sei-mysql](https://hub.docker.com/r/seikubernetes/sei-mysql)
+* [sei](https://hub.docker.com/r/seikubernetes/sei)
 
 ### Instalação
 
@@ -116,7 +132,8 @@ O helm deve ser instalado:
    kubectl create namespace projeto-sei
    ```
 3. Defina a variável de namespace name no arquivo de nome values.yaml conforme nome do namespace criado anteriormente.
-4. Instale o helm chart do sei para criar o ambiente completo:
+4. Configure as variáveis do values.yaml correspondentes ao seu ambiente kubernetes.
+5. Instale o Helm Chart do sei para criar o ambiente completo baseado nas definições estabelecidadas:
    ```sh
    helm install projeto-sei .projeto-sei/sei
    ```
