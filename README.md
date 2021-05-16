@@ -162,6 +162,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    ```
    *OBS: Não execute o passo 5 se tiver instalado em namespaces que tem outras aplicações junto, pois, ele irá remover tudo que há no namespace
 
+
 <!-- ROADMAP -->
 ## Roadmap
 

@@ -15,4 +15,4 @@ spec:
       targetPort: 8080
   selector:
     app: {{ .Release.Name }}-{{ .Values.apache.name }}
-    deployment: {{ .Release.Name }}-{{ .Values.apache.name }}
+    deployment: {{ .Values.apache.name }}

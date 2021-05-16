@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: {{ .Release.Name }}-{{ .Values.jod.name }}
-          image:  {{ .Values.jod.image }}
+          image:  {{ .Values.jod.image }}:{{ .Values.jod.tag }}
           ports:
             - containerPort: 8080
               protocol: TCP

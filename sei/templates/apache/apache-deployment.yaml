@@ -19,9 +19,9 @@ spec:
         deployment: {{ .Values.apache.name }}
     spec:
       volumes:
-        - name: {{ .Values.apache.volume.name }}
+        - name: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
           persistentVolumeClaim:
-            claimName: {{ .Values.apache.volume.name }}
+            claimName: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
       containers:
         - name: sei
           env:
@@ -149,7 +149,7 @@ spec:
             - containerPort: 8080
               protocol: TCP
           volumeMounts:
-            - name: {{ .Values.apache.volume.name }}
+            - name: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
               mountPath: {{ .Values.sei.SEI_REPOSITORIO_ARQUIVOS }}
-          image: {{ .Values.apache.image }}
+          image: {{ .Values.apache.image }}:{{ .Values.apache.tag }}
       restartPolicy: Always
