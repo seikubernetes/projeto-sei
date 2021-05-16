@@ -159,16 +159,19 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contatos
 
+### Marcelo Lima
 ![nome-marcelo][nome-shield-marcelo]
 [![github-marcelo][github-shield-marcelo]][github-url-marcelo]
 [![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
 [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
+### Igor Oliveira
 ![nome-igor][nome-shield-igor]
 [![github-igor][github-shield-igor]][github-url-igor]
 [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 [![Email-Igor][mail-shield-igor]][mail-url-igor]
 
+### Carlos Lima
 ![nome-carlos][nome-shield-carlos]
 [![github-carlos][github-shield-carlos]][github-url-carlos]
 [![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
@@ -219,7 +222,7 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 [github-url-carlos]: https://github.com/marcelolimax
 [mail-shield-carlos]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-carlos]: mailto:adicionar-email@email.com
-[nome-shield-igor]: https://img.shields.io/badge/Nome-Igor%20José%20Gomes%20de%Oliveira-yellowgreen.svg?logo=mail&style=for-the-badge
+[nome-shield-igor]: https://img.shields.io/badge/Nome-Igor%20Jos%C3%A9%20Gomes%20de%20Oliveira-yellowgreen.svg?logo=mail&style=for-the-badge
 
 <!-- IGOR -->
 [linkedin-shield-igor]: https://img.shields.io/badge/linkedin-igor-brightgreen.svg?logo=linkedin&style=for-the-badge
