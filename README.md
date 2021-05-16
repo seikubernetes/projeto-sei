@@ -164,19 +164,19 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contatos
 
-### Marcelo Lima
+### Marcelo
 ![nome-marcelo][nome-shield-marcelo]
 [![github-marcelo][github-shield-marcelo]][github-url-marcelo]
 [![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
 [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
-### Igor Oliveira
+### Igor
 ![nome-igor][nome-shield-igor]
 [![github-igor][github-shield-igor]][github-url-igor]
 [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 [![Email-Igor][mail-shield-igor]][mail-url-igor]
 
-### Carlos Lima
+### Carlos
 ![nome-carlos][nome-shield-carlos]
 [![github-carlos][github-shield-carlos]][github-url-carlos]
 [![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
