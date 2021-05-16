@@ -27,43 +27,26 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Índice</summary>
-  <ol>
-    <li>
-      <a href="#Sobre-o-projeto">Sobre o projeto</a>
-      <ul>
-        <li><a href="#Tecnologias-utilizadas">Tecnologias utilizadas</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#Começando">Começando</a>
-      <ul>
-        <li><a href="#arquitetura">Arquitetura</a></li>
-        <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
-        <li><a href="#imagens">Imagens</a></li>
-        <li><a href="#instalação">Instalação</a></li>
-        <li><a href="#desinstalação">Desinstalação</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#Contribuições">Contribuições</a></li>
-    <li><a href="#Licença">Licença</a></li>
-    <li><a href="#Contatos">Contatos</a></li>
-    <ul>
-        <li><a href="#marcelo">Marcelo Lima</a></li>
-        <li><a href="#igor">Igor Oliveira</a></li>
-        <li><a href="#carlos">Carlos Lima</a></li>
-    </ul>
-    <li><a href="#Reconhecimentos">Reconhecimentos</a></li>
-  </ol>
-</details>
-
+# Table of contents
+1. [Sobre o projeto](#Sobre)
+    1. [Tecnologias utilizadas](#Tecnologias)
+2. [Começando](#Começando)
+    1. [Arquitetura](#Arquitetura)
+    2. [Pré-requisitos](#Prerequisitos)
+    3. [Imagens](#Imagens)
+    4. [Instalação](#Instalação)
+    5. [Desisntalação](#Desinstalação)
+3. [Roadmap](#Roadmap)
+4. [Contribuições](#Contribuições)
+5. [Licença](#Licença)
+6. [Contatos](#Contatos)
+    1. [Marcelo Lima](#Marcelo)
+    2. [Igor Oliveira](#Igor)
+    3. [Carlos Lima](#Carlos)
 
 
 <!-- Sobre o projeto -->
-## Sobre o projeto
+## Sobre o projeto <a name="Sobre"></a>
 
 [![SEI][product-screenshot]](https://softwarepublico.gov.br/social/profile/sei)
 
@@ -71,7 +54,7 @@ O Sistema Eletrônico de Informações (SEI), desenvolvido pelo Tribunal Regiona
 
 O projeto atual visa permitir a instalação de um ambiente completo do SEI em Kubernetes via Helm.
 
-### Tecnologias utilizadas
+### Tecnologias utilizadas <a name="Tecnologias"></a>
 
 Para a implantação do projeto é necessário o uso do Helm e Git.
 
@@ -90,11 +73,11 @@ As tecnologias utilizadas no ambiente foram:
 * [Alpine](https://alpinelinux.org/)
 
 <!-- Começando -->
-## Começando
+## Começando <a name="Começando"></a>
 
 Nesta sessão iremos demostrar a arquitetura e o processo de instalação e desinstalação do SEI em Kubernetes.
 
-### Arquitetura
+## Arquitetura <a name="Arquitetura"></a>
 
 A arquitetura do projeto SEI Kubernetes é composta pelos seguintes containers:<br>
 * Banco de dados Mysql
@@ -105,7 +88,7 @@ A arquitetura do projeto SEI Kubernetes é composta pelos seguintes containers:<
 [![SeiKubernetes][project-screenshot]](https://drive.google.com/file/d/1MfvLN3vewDgHmu3Ri0z0jAxEmdpiLMup/view?usp=sharing)
 
 
-### Pré-requisitos
+## Pré-requisitos <a name="Prerequisitos"></a>
 
 O Helm deve ser instalado:
 * Helm
@@ -115,7 +98,7 @@ O Helm deve ser instalado:
    $ ./get_helm.sh
   ```
 
-### Imagens
+## Imagens <a name="Imagens"></a>
 
 Todas as imagens foram construídas utilizando como imagem base o projeto Alpinelinux:
 
@@ -124,7 +107,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
 * [sei-mysql](https://hub.docker.com/r/seikubernetes/sei-mysql)
 * [sei](https://hub.docker.com/r/seikubernetes/sei)
 
-### Instalação
+## Instalação <a name="Instalação"></a>
 
 1. Realize o clone do repositório localmente:
    ```sh
@@ -141,7 +124,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    helm install projeto-sei .projeto-sei/sei
    ```
 
-### Desinstalação
+## Desinstalação <a name="Desinstalação"></a>
 
 1. Realize o clone do repositório localmente:
    ```sh
@@ -164,14 +147,14 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Roadmap <a name="Roadmap"></a>
 
 Veja [problemas abertos](https://github.com/seikubernetes/projeto-sei/issues) para obter uma lista de recursos propostos (e problemas conhecidos).
 
 
 
 <!-- CONTRIBUTING -->
-## Contribuições
+## Contribuições <a name="Contribuições"></a>
 
 Constribuições são o que tornam a comunidade de código aberto um lugar incrível para aprender, inspirar e criar. Quaisquer contribuições são ** muito apreciadas**.
 
@@ -184,28 +167,28 @@ Constribuições são o que tornam a comunidade de código aberto um lugar incr�
 
 
 <!-- LICENSE -->
-## Licença
+## Licença <a name="Licença"></a>
 
 Distributed under the GLP-3.0. See `LICENSE` for more information.
 
 
 
 <!-- CONTACT -->
-## Contatos
+## Contatos <a name="Contatos"></a>
 
-### Marcelo
+## Marcelo <a name="Marcelo"></a>
 ![nome-marcelo][nome-shield-marcelo]
 [![github-marcelo][github-shield-marcelo]][github-url-marcelo]
 [![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
 [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
-### Igor
+## Igor <a name="Igor"></a>
 ![nome-igor][nome-shield-igor]
 [![github-igor][github-shield-igor]][github-url-igor]
 [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 [![Email-Igor][mail-shield-igor]][mail-url-igor]
 
-### Carlos
+## Carlos <a name="Carlos"></a>
 ![nome-carlos][nome-shield-carlos]
 [![github-carlos][github-shield-carlos]][github-url-carlos]
 [![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
@@ -238,7 +221,7 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/seikubernetes/projeto-sei.svg?style=for-the-badge
 [issues-url]: https://github.com/seikubernetes/projeto-sei/issues
 [license-shield]: https://img.shields.io/github/license/seikubernetes/projeto-sei.svg?style=for-the-badge
-[license-url]: https://github.com/seikubernetes/projeto-sei/blob/master/LICENSE.txt
+[license-url]: https://github.com/seikubernetes/projeto-sei/blob/master/LICENSE
 
 <!-- MARCELO -->
 [linkedin-shield-marcelo]: https://img.shields.io/badge/linkedin-marcelo-brightgreen.svg?logo=linkedin&style=for-the-badge
