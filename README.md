@@ -96,7 +96,7 @@ Nesta sessão iremos demostrar a arquitetura e o processo de instalação e desi
 
 ### Arquitetura
 
-A arquitetura do projeto SeiKubernetes é composta pelos seguintes containers:<br>
+A arquitetura do projeto SEI Kubernetes é composta pelos seguintes containers:<br>
 * Banco de dados Mysql
 * Serviço Jodconverter
 * Serviço Web Apache+PHP+Memcached
@@ -152,15 +152,15 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    ```sh
    helm uninstall projeto-sei
    ```
-3.1. Caso não lembre o nome do Helm do sei instalado execute:
+4. Caso não lembre o nome do Helm do sei instalado execute:
    ```sh
    helm list
    ```
-4. Caso não apareça o helm criado remova o namespace criado e os recursos criados com ele irão ser apagados:
+5. *Caso não apareça o helm criado e se o namespace tenha sido criado conforme recomendado, pode-se apagar o namespace e os recursos criados dentro dele irão ser apagados também:
    ```sh
    kubectl delete namespace projeto-sei
    ```
-
+   *OBS: Não execute o passo 5 se tiver instalado em namespaces que tem outras aplicações junto, pois, ele irá remover tudo que há no namespace
 
 <!-- ROADMAP -->
 ## Roadmap
