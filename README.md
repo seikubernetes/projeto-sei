@@ -74,17 +74,17 @@ O projeto atual visa permitir a instalação de um ambiente completo do SEI em K
 ### Tecnologias utilizadas
 
 Para a implantação do projeto é necessário o uso do Helm e do git.
-* [helm](https://helm.sh/)
-* [git](https://github.com/)
-* [mysql](https://www.mysql.com/)
-* [apache](https://httpd.apache.org/)
-* [php](https://www.php.net/)
-* [jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
-* [memcache](https://memcached.org/)
-* [solr](https://solr.apache.org/)
-* [docker](https://www.docker.com/)
-* [podman](https://podman.io/)
-* [alpine](https://alpinelinux.org/)
+* [Helm](https://helm.sh/)
+* [Git](https://github.com/)
+* [Mysql](https://www.mysql.com/)
+* [Apache](https://httpd.apache.org/)
+* [Php](https://www.php.net/)
+* [Jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
+* [Memcached](https://memcached.org/)
+* [Solr](https://solr.apache.org/)
+* [Docker](https://www.docker.com/)
+* [Podman](https://podman.io/)
+* [Alpine](https://alpinelinux.org/)
 
 <!-- Começando -->
 ## Começando
