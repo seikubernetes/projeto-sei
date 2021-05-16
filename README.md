@@ -14,7 +14,7 @@
   <h3 align="center">SEI - KUBERNETES</h3>
 
   <p align="center">
-    Padronização de implantação de sistema eletrônico de informações e gestão de documentos (SEI) em PaaS Kubernetes públicas e privadas.
+    Padronização de implantação de Sistema Eletrônico de Informações e Gestão de Documentos (SEI) em PaaS Kubernetes públicas e privadas.
     <br />
     <a href="https://github.com/seikubernetes/projeto-sei"><strong>Explore»</strong></a>
     <br />
@@ -34,14 +34,15 @@
     <li>
       <a href="#Sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#Contruído-com">Contruído com</a></li>
+        <li><a href="#Tecnologias-utilizadas">Tecnologias utilizadas</a></li>
       </ul>
     </li>
     <li>
       <a href="#Começando">Começando</a>
       <ul>
         <li><a href="#arquitetura">Arquitetura</a></li>
-        <li><a href="#prerequisites">Prerequisitos</a></li>
+        <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#imagens">Imagens</a></li>
         <li><a href="#instalação">Instalação</a></li>
         <li><a href="#desinstalação">Desinstalação</a></li>
       </ul>
@@ -70,11 +71,20 @@ O Sistema Eletrônico de Informações (SEI), desenvolvido pelo Tribunal Regiona
 
 O projeto atual visa permitir a instalação de um ambiente completo do SEI em Kubernetes via Helm.
 
-### Contruído com
+### Tecnologias utilizadas
 
 Para a implantação do projeto é necessário o uso do Helm e do git.
 * [helm](https://helm.sh/)
 * [git](https://github.com/)
+* [mysql](https://www.mysql.com/)
+* [apache](https://httpd.apache.org/)
+* [php](https://www.php.net/)
+* [jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
+* [memcache](https://memcached.org/)
+* [solr](https://solr.apache.org/)
+* [docker](https://www.docker.com/)
+* [podman](https://podman.io/)
+* [alpine](https://alpinelinux.org/)
 
 <!-- Começando -->
 ## Começando
@@ -88,14 +98,8 @@ um Banco de dados mysql, um servidor jodconverter, um servidor apache+php+memcac
 
 [![SeiKubernetes][project-screenshot]](https://drive.google.com/file/d/1MfvLN3vewDgHmu3Ri0z0jAxEmdpiLMup/view?usp=sharing)
 
-* [mysql](https://www.mysql.com/)
-* [apache](https://httpd.apache.org/)
-* [php](https://www.php.net/)
-* [jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
-* [memcache](https://memcached.org/)
-* [solr](https://solr.apache.org/)
 
-### Prerequisitos
+### Pré-requisitos
 
 O helm deve ser instalado:
 * helm
@@ -104,6 +108,15 @@ O helm deve ser instalado:
    $ chmod 700 get_helm.sh
    $ ./get_helm.sh
   ```
+
+### Imagens
+
+Todas as imagens foram construídas utilizando como imagem base o alpinelinux:
+
+* [sei-jodconverter](https://hub.docker.com/r/seikubernetes/sei-jodconverter)
+* [sei-solr](https://hub.docker.com/r/seikubernetes/sei-solr)
+* [sei-mysql](https://hub.docker.com/r/seikubernetes/sei-mysql)
+* [sei](https://hub.docker.com/r/seikubernetes/sei)
 
 ### Instalação
 
