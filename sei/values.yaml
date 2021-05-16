@@ -17,7 +17,6 @@ solr:
   tag: latest
   volume: 
     name: volume-solr
-    mount: /dados
     size: 1Gi
     accessMode: ReadWriteOnce
 
@@ -28,7 +27,6 @@ mysql:
   defaul_password: "'123'"
   volume: 
     name: volume-mysql
-    mount: /var/lib/mysql-sei
     size: 1Gi
     accessMode: ReadWriteOnce
 
