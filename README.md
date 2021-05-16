@@ -202,6 +202,8 @@ Carlos Lima - <>
 [issues-url]: https://github.com/seikubernetes/projeto-sei/issues
 [license-shield]: https://img.shields.io/github/license/seikubernetes/projeto-sei.svg?style=for-the-badge
 [license-url]: https://github.com/seikubernetes/projeto-sei/blob/master/LICENSE.txt
+
+<!-- MARCELO -->
 [linkedin-shield-marcelo]: https://img.shields.io/badge/linkedin-marcelo-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-marcelo]: https://www.linkedin.com/in/marcelo-lima-6724b930
 [github-shield-marcelo]: https://img.shields.io/badge/github-marcelo-brightgreen.svg?logo=github&style=for-the-badge
@@ -209,19 +211,21 @@ Carlos Lima - <>
 [mail-shield-marcelo]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-marcelo]: mailto:marcelo.lima@tjpe.jus.br
 
+<!-- CARLOS -->
 [linkedin-shield-carlos]: https://img.shields.io/badge/linkedin-carlos-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-carlos]: https://www.linkedin.com/in/carlos-lima/
 [github-shield-carlos]: https://img.shields.io/badge/github-carlos-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-carlos]: https://github.com/marcelolimax
 [mail-shield-carlos]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
-[mail-url-carlos]: mailto:igor.oliveira@tjpe.jus.br
+[mail-url-carlos]: mailto:adicionar-email@email.com
 
+<!-- IGOR -->
 [linkedin-shield-igor]: https://img.shields.io/badge/linkedin-igor-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-igor]: https://www.linkedin.com/
 [github-shield-igor]: https://img.shields.io/badge/github-igor-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-igor]: https://github.com/ijgoliveira
 [mail-shield-igor]: https://img.shields.io/badge/Email-igor.oliveira%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
-[mail-url-igor]:
+[mail-url-igor]: mailto:igor.oliveira@tjpe.jus.br
 
 [product-screenshot]: images/logo.png
 [project-screenshot]: images/Sei-kubernetes.png
