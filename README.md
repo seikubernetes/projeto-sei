@@ -40,6 +40,7 @@
     <li>
       <a href="#Começando">Começando</a>
       <ul>
+        <li><a href="#arquitetura">Arquitetura</a></li>
         <li><a href="#prerequisites">Prerequisitos</a></li>
         <li><a href="#instalação">Instalação</a></li>
         <li><a href="#desinstalação">Desinstalação</a></li>
@@ -74,6 +75,20 @@ Para a implantação do projeto é necessário o uso do Helm e do git.
 ## Começando
 
 Nesta sessão iremos demostrar como a instalação e a desinstalação do ambiente deve ser realizada.
+
+### Arquitetura
+
+A arquitetura do projeto SeiKubernetes é composta por 4 containers.
+um Banco de dados mysql, um servidor jodconverter, um servidor apache+php+memcache e um servidor solr
+
+[![SeiKubernetes][project-screenshot]](https://drive.google.com/file/d/1MfvLN3vewDgHmu3Ri0z0jAxEmdpiLMup/view?usp=sharing)
+
+* [mysql](https://www.mysql.com/)
+* [apache](https://httpd.apache.org/)
+* [php](https://www.php.net/)
+* [jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
+* [memcache](https://memcached.org/)
+* [solr](https://solr.apache.org/)
 
 ### Prerequisitos
 
@@ -157,8 +172,6 @@ Carlos Lima - <>
 [![github-carlos][github-shield-carlos]][github-url-carlos][![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
 
 
-
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Reconhecimentos
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
@@ -172,9 +185,6 @@ Carlos Lima - <>
 * [Sticky Kit](http://leafo.net/sticky-kit)
 * [JVectorMap](http://jvectormap.com)
 * [Font Awesome](https://fontawesome.com)
-
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -202,3 +212,4 @@ Carlos Lima - <>
 [github-shield-igor]: https://img.shields.io/badge/github-igor-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-igor]: https://github.com/ijgoliveira
 [product-screenshot]: images/logo.png
+[project-screenshot]: images/Sei-kubernetes.png
