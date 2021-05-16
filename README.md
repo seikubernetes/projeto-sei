@@ -50,6 +50,11 @@
     <li><a href="#Contribuições">Contribuições</a></li>
     <li><a href="#Licença">Licença</a></li>
     <li><a href="#Contatos">Contatos</a></li>
+    <ul>
+        <li><a href="#marcelo">Marcelo Lima</a></li>
+        <li><a href="#igor">Igor Oliveira</a></li>
+        <li><a href="#carlos">Carlos Lima</a></li>
+    </ul>
     <li><a href="#Reconhecimentos">Reconhecimentos</a></li>
   </ol>
 </details>
