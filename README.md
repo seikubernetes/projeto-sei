@@ -89,12 +89,15 @@ Para a implantação do projeto é necessário o uso do Helm e do git.
 <!-- Começando -->
 ## Começando
 
-Nesta sessão iremos demostrar como a instalação e a desinstalação do ambiente deve ser realizada.
+Nesta sessão iremos demostrar a arquitetura e informações a respeito de instalação e desinstalação do ambiente deve ser realizada.
 
 ### Arquitetura
 
-A arquitetura do projeto SeiKubernetes é composta por 4 containers.
-um Banco de dados mysql, um servidor jodconverter, um servidor apache+php+memcache e um servidor solr
+A arquitetura do projeto SeiKubernetes é composta pelos seguintes containers:<br>
+* Banco de dados Mysql
+* Serviço Jodconverter
+* Serviço Web Apache+PHP+Memcached
+* Serviço de indexação Solr
 
 [![SeiKubernetes][project-screenshot]](https://drive.google.com/file/d/1MfvLN3vewDgHmu3Ri0z0jAxEmdpiLMup/view?usp=sharing)
 
@@ -111,7 +114,7 @@ O helm deve ser instalado:
 
 ### Imagens
 
-Todas as imagens foram construídas utilizando como imagem base o alpinelinux:
+Todas as imagens foram construídas utilizando como imagem base o projeto Alpinelinux:
 
 * [sei-jodconverter](https://hub.docker.com/r/seikubernetes/sei-jodconverter)
 * [sei-solr](https://hub.docker.com/r/seikubernetes/sei-solr)
@@ -129,7 +132,8 @@ Todas as imagens foram construídas utilizando como imagem base o alpinelinux:
    kubectl create namespace projeto-sei
    ```
 3. Defina a variável de namespace name no arquivo de nome values.yaml conforme nome do namespace criado anteriormente.
-4. Instale o helm chart do sei para criar o ambiente completo:
+4. Configure as variáveis do values.yaml correspondentes ao seu ambiente kubernetes.
+5. Instale o Helm Chart do sei para criar o ambiente completo baseado nas definições estabelecidadas:
    ```sh
    helm install projeto-sei .projeto-sei/sei
    ```
