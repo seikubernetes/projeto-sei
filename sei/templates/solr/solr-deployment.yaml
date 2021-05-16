@@ -24,7 +24,7 @@ spec:
             claimName: pvc-{{ .Release.Name }}-{{ .Values.solr.volume.name }}
       containers:
         - name: {{ .Release.Name }}-{{ .Values.solr.name }}
-          image: {{ .Values.solr.image }}
+          image: {{ .Values.solr.image }}:{{ .Values.solr.tag }}
           ports:
             - containerPort: 8983
               protocol: TCP

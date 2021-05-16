@@ -32,7 +32,7 @@ mysql:
 
 apache:
   name: apache
-  image: seikubernetes/sei
+  image: seikubernetes/sei-apache
   tag: latest
   router: dominio.local
   volume: 
@@ -61,7 +61,7 @@ sei:
   BASE_UPDATE_PAGINA_INICIAL_SEI: "'https://sei.dominio.local/sei/inicializar.php'"
   BANCO_PORTA: "'3306'"
   SEI_NOME_SISTEMA_COMPLETO: "'ATENCAO - AMBIENTE DE HOMOLOGACAO!'"
-  BASE_UPDATE_SIGLA: "'TJPE'"
+  BASE_UPDATE_SIGLA: "'SIGLA-ORGÃO'"
   BASE_UPDATE_PAGINA_INICIAL_SIP: "'https://sei.dominio.local/sip'"
   #SENHA DEVE ESTAR EM BASE64
   SEI_BANCO_SENHA: 'c2Vp'
