@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.apache.name }}
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+    appglobal: {{ .Release.Name }}
+    router: {{ .Values.apache.router }}
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+    deployment: {{ .Release.Name }}-{{ .Values.apache.name }}

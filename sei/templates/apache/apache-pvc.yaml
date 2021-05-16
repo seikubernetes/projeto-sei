@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
+  namespace: {{ .Values.namespace.name }}
+  finalizers:
+    - kubernetes.io/pvc-protection
+spec:
+  accessModes:
+    - {{ .Values.apache.volume.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.apache.volume.size }}
+  volumeMode: Filesystem

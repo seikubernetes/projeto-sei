@@ -12,7 +12,7 @@ jod:
   tag: latest
 
 solr:
-  name: seisolr
+  name: solr
   image: seikubernetes/sei-solr
   tag: latest
   volume: 
@@ -22,14 +22,25 @@ solr:
     accessMode: ReadWriteOnce
 
 mysql:
-  name: seimysql
+  name: mysql
   image: seikubernetes/sei-mysql
   tag: latest
+  defaul_password: "'123'"
+  volume: 
+    name: volume-mysql
+    mount: /var/lib/mysql-sei
+    size: 1Gi
+    accessMode: ReadWriteOnce
 
 apache:
-  name: seiapache
+  name: apache
   image: seikubernetes/sei
   tag: latest
+  router: dominio.local
+  volume: 
+    name: volume-apache
+    size: 1Gi
+    accessMode: ReadWriteOnce  
 
 sei:
   BASE_UPDATE_DESCRICAO: "'NOME DO ORGAO PUBLICO'"

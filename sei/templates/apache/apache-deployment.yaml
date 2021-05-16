@@ -1,0 +1,155 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.apache.name }}
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-{{ .Values.apache.name }}
+      deployment: {{ .Values.apache.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-{{ .Values.apache.name }}
+        deployment: {{ .Values.apache.name }}
+    spec:
+      volumes:
+        - name: {{ .Values.apache.volume.name }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.apache.volume.name }}
+      containers:
+        - name: sei
+          env:
+            - name: SEI_REPOSITORIO_ARQUIVOS
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SEI_REPOSITORIO_ARQUIVOS
+            - name: SIP_PRODUCAO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SIP_PRODUCAO
+            - name: SIP_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SIP_URL
+            - name: SIP_BANCO_NOME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SIP_BANCO_NOME
+            - name: BANCO_PORTA
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BANCO_PORTA
+            - name: BANCO_SERVIDOR
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BANCO_SERVIDOR
+            - name: EMAIL_SERVIDOR
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: EMAIL_SERVIDOR
+            - name: SEI_BANCO_NOME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SEI_BANCO_NOME
+            - name: SEI_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SEI_URL
+            - name: JODCONVERTER_SERVIDOR
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: JODCONVERTER_SERVIDOR
+            - name: SEI_BANCO_USUARIO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SEI_BANCO_USUARIO
+            - name: SEI_NOME_SISTEMA_COMPLETO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SEI_NOME_SISTEMA_COMPLETO
+            - name: SIP_BANCO_USUARIO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SIP_BANCO_USUARIO
+            - name: SEI_PRODUCAO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SEI_PRODUCAO
+            - name: SIP_PAGINA_LOGIN
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SIP_PAGINA_LOGIN
+            - name: SIP_WSDL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SIP_WSDL
+            - name: SOLR_SERVIDOR
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: SOLR_SERVIDOR
+            - name: SEI_BANCO_SENHA
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secret
+                  key: SEI_BANCO_SENHA
+            - name: SIP_BANCO_SENHA
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secret
+                  key: SIP_BANCO_SENHA
+            - name: BASE_UPDATE_PAGINA_INICIAL_SIP
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BASE_UPDATE_PAGINA_INICIAL_SIP
+            - name: BASE_UPDATE_SIGLA
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BASE_UPDATE_SIGLA
+            - name: BASE_UPDATE_PAGINA_INICIAL_SEI
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BASE_UPDATE_PAGINA_INICIAL_SEI
+            - name: BASE_UPDATE_DESCRICAO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BASE_UPDATE_DESCRICAO
+            - name: BASE_UPDATE_WEB_SERVICE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: BASE_UPDATE_WEB_SERVICE
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          volumeMounts:
+            - name: {{ .Values.apache.volume.name }}
+              mountPath: {{ .Values.sei.SEI_REPOSITORIO_ARQUIVOS }}
+          image: {{ .Values.apache.image }}
+      restartPolicy: Always

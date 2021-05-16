@@ -1,0 +1,44 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.mysql.name }}
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.mysql.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-{{ .Values.mysql.name }}
+      deployment: {{ .Values.mysql.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-{{ .Values.mysql.name }}
+        deployment: {{ .Values.mysql.name }}
+    spec:
+      volumes:
+        - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
+          persistentVolumeClaim:
+            claimName: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
+      containers:
+        - name: mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: {{ .Values.mysql.defaul_password }}
+          ports:
+            - containerPort: 3306
+              protocol: TCP
+            - containerPort: 33060
+              protocol: TCP
+          volumeMounts:
+            - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
+              mountPath: {{ .Values.mysql.volume1.mount }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-configmap
+            - secretRef:
+                name: {{ .Release.Name }}-secret
+          image: {{ .Values.mysql.image }}
+      restartPolicy: Always

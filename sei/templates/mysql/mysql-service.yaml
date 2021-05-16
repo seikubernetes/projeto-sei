@@ -1,0 +1,21 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.mysql.name }}
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.mysql.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  ports:
+    - name: 3306-tcp
+      protocol: TCP
+      port: 3306
+      targetPort: 3306
+    - name: 33060-tcp
+      protocol: TCP
+      port: 33060
+      targetPort: 33060
+  selector:
+    app: {{ .Release.Name }}-{{ .Values.mysql.name }}
+    deployment: {{ .Values.mysql.name }}
