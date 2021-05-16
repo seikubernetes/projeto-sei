@@ -89,7 +89,7 @@ Para a implantação do projeto é necessário o uso do Helm e do git.
 <!-- Começando -->
 ## Começando
 
-Nesta sessão iremos demostrar a arquitetura e informações a respeito de instalação e desinstalação do ambiente deve ser realizada.
+Nesta sessão iremos demostrar a arquitetura e o processo de instalação e desinstalação do SEI em Kubernetes.
 
 ### Arquitetura
 
@@ -105,7 +105,7 @@ A arquitetura do projeto SeiKubernetes é composta pelos seguintes containers:<b
 ### Pré-requisitos
 
 O helm deve ser instalado:
-* helm
+* Helm
   ```sh
    $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
    $ chmod 700 get_helm.sh
@@ -133,7 +133,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    ```
 3. Defina a variável de namespace name no arquivo de nome values.yaml conforme nome do namespace criado anteriormente.
 4. Configure as variáveis do values.yaml correspondentes ao seu ambiente kubernetes.
-5. Instale o Helm Chart do sei para criar o ambiente completo baseado nas definições estabelecidadas:
+5. Instale o Helm Chart do SEI para criar o ambiente completo baseado nas definições estabelecidadas:
    ```sh
    helm install projeto-sei .projeto-sei/sei
    ```
@@ -145,9 +145,17 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    git clone https://github.com/seikubernetes/projeto-sei.git
    ```
 2. Defina a variável de namespace name no arquivo de nome values.yaml conforme nome do namespace onde o sei está instalado.
-3. Desinstale o helm chart sei para deletar todos os recursos criados no namespace definido.
+3. Desinstale o Helm Chart do SEI para deletar todos os recursos criados no namespace definido.
    ```sh
-   helm uninstall projeto-sei .projeto-sei/sei
+   helm uninstall projeto-sei
+   ```
+3.1. Caso não lembre o nome do Helm do sei instalado execute:
+   ```sh
+   helm list
+   ```
+4. Caso não apareça o helm criado remova o namespace criado e os recursos criados com ele irão ser apagados:
+   ```sh
+   kubectl delete namespace projeto-sei
    ```
 
 
