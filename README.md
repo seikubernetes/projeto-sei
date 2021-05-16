@@ -43,7 +43,7 @@
     1. [Marcelo Lima](#Marcelo)
     2. [Igor Oliveira](#Igor)
     3. [Carlos Lima](#Carlos)
-
+6. [Reconhecimentos](#Reconhecimentos)
 
 <!-- Sobre o projeto -->
 ## Sobre o projeto <a name="Sobre"></a>
@@ -196,7 +196,7 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Reconhecimentos
+## Reconhecimentos <a name="Reconhecimentos"></a>
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
