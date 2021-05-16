@@ -225,7 +225,7 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 [linkedin-carlos]: https://www.linkedin.com/in/carlos-lima/
 [github-shield-carlos]: https://img.shields.io/badge/github-carlos-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-carlos]: https://github.com/marcelolimax
-[mail-shield-carlos]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
+[mail-shield-carlos]: https://img.shields.io/badge/Email-adicionar-email%40email.com-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-carlos]: mailto:adicionar-email@email.com
 [nome-shield-igor]: https://img.shields.io/badge/Nome-Igor%20Jos%C3%A9%20Gomes%20de%20Oliveira-yellowgreen.svg?logo=mail&style=for-the-badge
 
