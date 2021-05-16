@@ -73,13 +73,16 @@ O projeto atual visa permitir a instalação de um ambiente completo do SEI em K
 
 ### Tecnologias utilizadas
 
-Para a implantação do projeto é necessário o uso do Helm e do git.
+Para a implantação do projeto é necessário o uso do Helm e Git.
+
+As tecnologias utilizadas no ambiente foram:
+
 * [Helm](https://helm.sh/)
 * [Git](https://github.com/)
 * [Mysql](https://www.mysql.com/)
 * [Apache](https://httpd.apache.org/)
 * [Php](https://www.php.net/)
-* [Jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
+* [Jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter)
 * [Memcached](https://memcached.org/)
 * [Solr](https://solr.apache.org/)
 * [Docker](https://www.docker.com/)
