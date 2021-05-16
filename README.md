@@ -1,33 +1,27 @@
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stargazers][stars-shield]][stars-url]
-  [![Issues][issues-shield]][issues-url]
-  [![MIT License][license-shield]][license-url]
-  [![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
-  [![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
-  [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
-
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/seikubernetes/projeto-sei">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/sei.png" alt="Logo" width="400" height="300">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Padronização de implantação de sistema eletrônico de informações e gestão de documentos (SEI) em PaaS Kubernetes públicas e privadas.
     <br />
-    <a href="https://github.com/seikubernetes/projeto-sei"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/seikubernetes/projeto-sei"><strong>Explore»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/seikubernetes/projeto-sei">View Demo</a>
+    <a href="https://github.com/seikubernetes/projeto-sei/issues">Reporte um Bug</a>
     ·
-    <a href="https://github.com/seikubernetes/projeto-sei/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/seikubernetes/projeto-sei/issues">Request Feature</a>
+    <a href="https://github.com/seikubernetes/projeto-sei/issues">Solicite uma feature</a>
   </p>
 </p>
 
@@ -35,36 +29,37 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#Sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#Contruído-com">Contruído com</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#Começando">Começando</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Prerequisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+        <li><a href="#desinstalação">desinstalação</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#uso">Uso</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#Contribuições">Contribuições</a></li>
+    <li><a href="#Licença">Licença</a></li>
+    <li><a href="#Contatos">Contatos</a></li>
+    <li><a href="#Reconhecimentos">Reconhecimentos</a></li>
   </ol>
 </details>
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- Sobre o projeto -->
+## Sobre o projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![SEI][product-screenshot]](https://softwarepublico.gov.br/social/profile/sei)
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -77,7 +72,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-### Built With
+### Contruído com
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [helm](https://helm.sh/)
@@ -85,13 +80,13 @@ This section should list any major frameworks that you built your project using.
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- Começando -->
+## Começando
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Prerequisitos
 
 This is an example of how to list things you need to use the software and how to install them.
 * helm
@@ -101,7 +96,7 @@ This is an example of how to list things you need to use the software and how to
    $ ./get_helm.sh
   ```
 
-### Installation
+### Instalação
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
@@ -118,7 +113,7 @@ This is an example of how to list things you need to use the software and how to
    helm install projeto-sei .projeto-sei/sei
    ```
 
-### Uninstallation
+### Desinstalação
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
@@ -131,7 +126,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Uso
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -147,7 +142,7 @@ See the [open issues](https://github.com/seikubernetes/projeto-sei/issues) for a
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribuições
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -160,29 +155,32 @@ Contributions are what make the open source community such an amazing place to b
 
 
 <!-- LICENSE -->
-## License
+## Licença
 
 Distributed under the GLP-3.0. See `LICENSE` for more information.
 
 
 
 <!-- CONTACT -->
-## Contact
+## Contactos
 
 Marcelo Wanderley Lima - marcelo.lima@tjpe.jus.br
-Project Link: [https://github.com/marcelolimax/](https://github.com/marcelolimax/)
+
+[![github-marcelo][github-shield-marcelo]][github-url-marcelo][![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
 
 Igor Jose Gomes De Oliveira - igor.oliveira@tjpe.jus.br
-Project Link: [https://github.com/ijgoliveira/](https://github.com/ijgoliveira/)
+
+[![github-igor][github-shield-igor]][github-url-igor][![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 
 Carlos Lima - <>
-Project Link: [https://github.com/marcelolimax/](https://github.com/marcelolimax/)
+
+[![github-carlos][github-shield-carlos]][github-url-carlos][![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
 
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Reconhecimentos
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
@@ -213,8 +211,14 @@ Project Link: [https://github.com/marcelolimax/](https://github.com/marcelolimax
 [license-url]: https://github.com/seikubernetes/projeto-sei/blob/master/LICENSE.txt
 [linkedin-shield-marcelo]: https://img.shields.io/badge/linkedin-marcelo-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-marcelo]: https://www.linkedin.com/in/marcelo-lima-6724b930
+[github-shield-marcelo]: https://img.shields.io/badge/github-marcelo-brightgreen.svg?logo=github&style=for-the-badge
+[github-url-marcelo]: https://github.com/marcelolimax
 [linkedin-shield-carlos]: https://img.shields.io/badge/linkedin-carlos-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-carlos]: https://www.linkedin.com/in/carlos-lima/
+[github-shield-carlos]: https://img.shields.io/badge/github-carlos-brightgreen.svg?logo=github&style=for-the-badge
+[github-url-carlos]: https://github.com/marcelolimax
 [linkedin-shield-igor]: https://img.shields.io/badge/linkedin-igor-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-igor]: https://www.linkedin.com/
-[product-screenshot]: images/screenshot.png
+[github-shield-igor]: https://img.shields.io/badge/github-igor-brightgreen.svg?logo=github&style=for-the-badge
+[github-url-igor]: https://github.com/ijgoliveira
+[product-screenshot]: images/logo.png
