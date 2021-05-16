@@ -159,17 +159,17 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contatos
 
-[![nome-marcelo][nome-shield-marcelo]] 
+![nome-marcelo][nome-shield-marcelo]
 [![github-marcelo][github-shield-marcelo]][github-url-marcelo]
 [![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
 [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
-[![nome-igor][nome-shield-igor]]
+![nome-igor][nome-shield-igor]
 [![github-igor][github-shield-igor]][github-url-igor]
 [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 [![Email-Igor][mail-shield-igor]][mail-url-igor]
 
-[![nome-carlos][nome-shield-carlos]]
+![nome-carlos][nome-shield-carlos]
 [![github-carlos][github-shield-carlos]][github-url-carlos]
 [![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
 [![Email-carlos][mail-shield-carlos]][mail-url-carlos]
