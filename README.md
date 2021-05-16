@@ -157,19 +157,15 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 
 
 <!-- CONTACT -->
-## Contactos
+## Contatos
 
-Marcelo Wanderley Lima - marcelo.lima@tjpe.jus.br
+Marcelo Wanderley Lima [![github-marcelo][github-shield-marcelo]][github-url-marcelo][![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo] [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
-[![github-marcelo][github-shield-marcelo]][github-url-marcelo][![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
-
-Igor Jose Gomes De Oliveira - igor.oliveira@tjpe.jus.br
-
-[![github-igor][github-shield-igor]][github-url-igor][![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
+Igor Jose Gomes De Oliveira [![github-igor][github-shield-igor]][github-url-igor][![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor][![Email-Igor][mail-shield-igor]][mail-url-igor]
 
 Carlos Lima - <>
 
-[![github-carlos][github-shield-carlos]][github-url-carlos][![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
+[![github-carlos][github-shield-carlos]][github-url-carlos][![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos][![Email-carlos][mail-shield-carlos]][mail-url-carlos]
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -203,13 +199,22 @@ Carlos Lima - <>
 [linkedin-marcelo]: https://www.linkedin.com/in/marcelo-lima-6724b930
 [github-shield-marcelo]: https://img.shields.io/badge/github-marcelo-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-marcelo]: https://github.com/marcelolimax
+[mail-shield-marcelo]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
+[mail-url-marcelo]: mailto:marcelo.lima@tjpe.jus.br
+
 [linkedin-shield-carlos]: https://img.shields.io/badge/linkedin-carlos-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-carlos]: https://www.linkedin.com/in/carlos-lima/
 [github-shield-carlos]: https://img.shields.io/badge/github-carlos-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-carlos]: https://github.com/marcelolimax
+[mail-shield-carlos]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
+[mail-url-carlos]: mailto:igor.oliveira@tjpe.jus.br
+
 [linkedin-shield-igor]: https://img.shields.io/badge/linkedin-igor-brightgreen.svg?logo=linkedin&style=for-the-badge
 [linkedin-igor]: https://www.linkedin.com/
 [github-shield-igor]: https://img.shields.io/badge/github-igor-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-igor]: https://github.com/ijgoliveira
+[mail-shield-igor]: https://img.shields.io/badge/Email-igor.oliveira%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
+[mail-url-igor]:
+
 [product-screenshot]: images/logo.png
 [project-screenshot]: images/Sei-kubernetes.png
