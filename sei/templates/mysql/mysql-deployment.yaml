@@ -34,7 +34,7 @@ spec:
               protocol: TCP
           volumeMounts:
             - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
-              mountPath: {{ .Values.mysql.volume1.mount }}
+              mountPath: /var/lib/mysql-sei
           envFrom:
             - configMapRef:
                 name: {{ .Release.Name }}-configmap

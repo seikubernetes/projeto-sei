@@ -31,5 +31,5 @@ spec:
           resources: {}
           volumeMounts:
             - name: pvc-{{ .Release.Name }}-{{ .Values.solr.volume.name }}
-              mountPath: {{ .Values.solr.volume.mount }}
+              mountPath: /dados
       restartPolicy: Always
