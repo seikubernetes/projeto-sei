@@ -159,17 +159,17 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contatos
 
-Marcelo Wanderley Lima 
+[nome-shield-marcelo] 
 [![github-marcelo][github-shield-marcelo]][github-url-marcelo]
 [![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
 [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
-Igor Jose Gomes De Oliveira 
+[nome-shield-igor]
 [![github-igor][github-shield-igor]][github-url-igor]
 [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 [![Email-Igor][mail-shield-igor]][mail-url-igor]
 
-Carlos Lima - <>
+[nome-shield-carlos]
 [![github-carlos][github-shield-carlos]][github-url-carlos]
 [![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
 [![Email-carlos][mail-shield-carlos]][mail-url-carlos]
@@ -210,6 +210,7 @@ Carlos Lima - <>
 [github-url-marcelo]: https://github.com/marcelolimax
 [mail-shield-marcelo]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-marcelo]: mailto:marcelo.lima@tjpe.jus.br
+[nome-shield-marcelo]: https://img.shields.io/badge/Nome-Marcelo%20Wanderley%20Lima-yellowgreen.svg?logo=mail&style=for-the-badge
 
 <!-- CARLOS -->
 [linkedin-shield-carlos]: https://img.shields.io/badge/linkedin-carlos-brightgreen.svg?logo=linkedin&style=for-the-badge
@@ -218,6 +219,7 @@ Carlos Lima - <>
 [github-url-carlos]: https://github.com/marcelolimax
 [mail-shield-carlos]: https://img.shields.io/badge/Email-marcelo.lima%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-carlos]: mailto:adicionar-email@email.com
+[nome-shield-igor]: https://img.shields.io/badge/Nome-Igor%20José%20Gomes%20de%Oliveira-yellowgreen.svg?logo=mail&style=for-the-badge
 
 <!-- IGOR -->
 [linkedin-shield-igor]: https://img.shields.io/badge/linkedin-igor-brightgreen.svg?logo=linkedin&style=for-the-badge
@@ -226,6 +228,7 @@ Carlos Lima - <>
 [github-url-igor]: https://github.com/ijgoliveira
 [mail-shield-igor]: https://img.shields.io/badge/Email-igor.oliveira%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-igor]: mailto:igor.oliveira@tjpe.jus.br
+[nome-shield-carlos]: https://img.shields.io/badge/Nome-Carlos%20Lima-yellowgreen.svg?logo=mail&style=for-the-badge
 
 [product-screenshot]: images/logo.png
 [project-screenshot]: images/Sei-kubernetes.png
