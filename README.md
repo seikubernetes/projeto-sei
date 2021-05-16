@@ -73,13 +73,16 @@ O projeto atual visa permitir a instalação de um ambiente completo do SEI em K
 
 ### Tecnologias utilizadas
 
-Para a implantação do projeto é necessário o uso do Helm e do git.
+Para a implantação do projeto é necessário o uso do Helm e Git.
+
+As tecnologias utilizadas no ambiente foram:
+
 * [Helm](https://helm.sh/)
 * [Git](https://github.com/)
 * [Mysql](https://www.mysql.com/)
 * [Apache](https://httpd.apache.org/)
 * [Php](https://www.php.net/)
-* [Jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter/2.2.2/)
+* [Jod-converter](https://sourceforge.net/projects/jodconverter/files/JODConverter)
 * [Memcached](https://memcached.org/)
 * [Solr](https://solr.apache.org/)
 * [Docker](https://www.docker.com/)
@@ -89,11 +92,11 @@ Para a implantação do projeto é necessário o uso do Helm e do git.
 <!-- Começando -->
 ## Começando
 
-Nesta sessão iremos demostrar a arquitetura e informações a respeito de instalação e desinstalação do ambiente deve ser realizada.
+Nesta sessão iremos demostrar a arquitetura e o processo de instalação e desinstalação do SEI em Kubernetes.
 
 ### Arquitetura
 
-A arquitetura do projeto SeiKubernetes é composta pelos seguintes containers:<br>
+A arquitetura do projeto SEI Kubernetes é composta pelos seguintes containers:<br>
 * Banco de dados Mysql
 * Serviço Jodconverter
 * Serviço Web Apache+PHP+Memcached
@@ -105,7 +108,7 @@ A arquitetura do projeto SeiKubernetes é composta pelos seguintes containers:<b
 ### Pré-requisitos
 
 O helm deve ser instalado:
-* helm
+* Helm
   ```sh
    $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
    $ chmod 700 get_helm.sh
@@ -133,7 +136,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    ```
 3. Defina a variável de namespace name no arquivo de nome values.yaml conforme nome do namespace criado anteriormente.
 4. Configure as variáveis do values.yaml correspondentes ao seu ambiente kubernetes.
-5. Instale o Helm Chart do sei para criar o ambiente completo baseado nas definições estabelecidadas:
+5. Instale o Helm Chart do SEI para criar o ambiente completo baseado nas definições estabelecidadas:
    ```sh
    helm install projeto-sei .projeto-sei/sei
    ```
@@ -145,11 +148,19 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
    git clone https://github.com/seikubernetes/projeto-sei.git
    ```
 2. Defina a variável de namespace name no arquivo de nome values.yaml conforme nome do namespace onde o sei está instalado.
-3. Desinstale o helm chart sei para deletar todos os recursos criados no namespace definido.
+3. Desinstale o Helm Chart do SEI para deletar todos os recursos criados no namespace definido.
    ```sh
-   helm uninstall projeto-sei .projeto-sei/sei
+   helm uninstall projeto-sei
    ```
-
+4. Caso não lembre o nome do Helm do sei instalado execute:
+   ```sh
+   helm list
+   ```
+5. *Caso não apareça o helm criado e se o namespace tenha sido criado conforme recomendado, pode-se apagar o namespace e os recursos criados dentro dele irão ser apagados também:
+   ```sh
+   kubectl delete namespace projeto-sei
+   ```
+   *OBS: Não execute o passo 5 se tiver instalado em namespaces que tem outras aplicações junto, pois, ele irá remover tudo que há no namespace
 
 <!-- ROADMAP -->
 ## Roadmap
