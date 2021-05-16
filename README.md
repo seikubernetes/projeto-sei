@@ -159,13 +159,20 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contatos
 
-Marcelo Wanderley Lima [![github-marcelo][github-shield-marcelo]][github-url-marcelo][![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo] [![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
+Marcelo Wanderley Lima 
+[![github-marcelo][github-shield-marcelo]][github-url-marcelo]
+[![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
+[![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
-Igor Jose Gomes De Oliveira [![github-igor][github-shield-igor]][github-url-igor][![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor][![Email-Igor][mail-shield-igor]][mail-url-igor]
+Igor Jose Gomes De Oliveira 
+[![github-igor][github-shield-igor]][github-url-igor]
+[![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
+[![Email-Igor][mail-shield-igor]][mail-url-igor]
 
 Carlos Lima - <>
-
-[![github-carlos][github-shield-carlos]][github-url-carlos][![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos][![Email-carlos][mail-shield-carlos]][mail-url-carlos]
+[![github-carlos][github-shield-carlos]][github-url-carlos]
+[![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
+[![Email-carlos][mail-shield-carlos]][mail-url-carlos]
 
 
 <!-- ACKNOWLEDGEMENTS -->
