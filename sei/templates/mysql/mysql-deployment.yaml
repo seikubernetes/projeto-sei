@@ -22,6 +22,13 @@ spec:
         - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
           persistentVolumeClaim:
             claimName: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
+      initContainers:
+      - name: change-permissions-{{ .Release.Name }}-{{ .Values.mysql.name }}
+        image: busybox:1.28
+        command: ['sh', '-c', "chown -R 0:0 /var/lib/mysql-sei"]
+        volumeMounts:
+          - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
+            mountPath: /var/lib/mysql-sei
       containers:
         - name: mysql
           env:
