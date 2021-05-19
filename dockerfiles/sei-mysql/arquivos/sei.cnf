@@ -1,0 +1,11 @@
+[client]
+default-character-set=latin1
+
+[mysql]
+default-character-set=latin1
+
+[mysqld]
+character-set-server=latin1
+skip-character-set-client-handshake
+datadir=/var/lib/mysql-sei
+default_authentication_plugin=mysql_native_password
