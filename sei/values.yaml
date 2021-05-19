@@ -41,29 +41,39 @@ apache:
     accessMode: ReadWriteOnce  
 
 sei:
+  #COLOCAR DESCRIÇÕES DO AMBIENTE
   BASE_UPDATE_DESCRICAO: "'NOME DO ORGAO PUBLICO'"
-  SIP_BANCO_NOME: "'sip'"
-  SEI_BANCO_USUARIO: "'sei'"
-  BASE_UPDATE_WEB_SERVICE: "'https://sei.dominio.local/sei/controlador_ws.php?servico=sip'"
-  SIP_BANCO_USUARIO: "'sip'"
-  SEI_BANCO_NOME: "'sei'"
-  SEI_URL: "'https://sei.dominio.local/sei'"
-  SIP_WSDL: "'https://sei.dominio.local/sip/controlador_ws.php?servico=wsdl'"
-  SIP_URL: "'https://sei.dominio.local/sip'"
-  SOLR_SERVIDOR: "'http://solr:8983/solr'"
-  JODCONVERTER_SERVIDOR: "'http://jodconverter:8080/converter/service'"
-  SIP_PAGINA_LOGIN: "'https://sei.dominio.local/sip/login.php'"
-  EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
-  BANCO_SERVIDOR: "'mysql'"
-  SIP_PRODUCAO: "'false'"
-  SEI_REPOSITORIO_ARQUIVOS: "'/sistemas/sei/homologacao'"
-  SEI_PRODUCAO: "'false'"
-  BASE_UPDATE_PAGINA_INICIAL_SEI: "'https://sei.dominio.local/sei/inicializar.php'"
-  BANCO_PORTA: "'3306'"
+  SIGLA_ORGAO: "'SIGLA-ORGAO'"
   SEI_NOME_SISTEMA_COMPLETO: "'ATENCAO - AMBIENTE DE HOMOLOGACAO!'"
-  BASE_UPDATE_SIGLA: "'SIGLA-ORGAO'"
-  BASE_UPDATE_PAGINA_INICIAL_SIP: "'https://sei.dominio.local/sip'"
-  #SENHA DEVE ESTAR EM BASE64
+
+  #COLOCAR A URL BASE DO SEI
+  SEI_SIP_DOMINIO: "'https://sei.dominio.local'"
+  
+  #COLOCAR INFORMAÇÕES DO BANCO DO SEI R SIP
+  BANCO_SERVIDOR: "'mysql'"
+  BANCO_PORTA: "'3306'"
+  SEI_BANCO_NOME: "'sei'"
+  SEI_BANCO_USUARIO: "'sei'"
+  SIP_BANCO_NOME: "'sip'"
+  SIP_BANCO_USUARIO: "'sip'"
+  #SENHAS DEVEM ESTAR EM BASE64
   SEI_BANCO_SENHA: 'c2Vp'
-  #SENHA DEVE ESTAR EM BASE64
   SIP_BANCO_SENHA: 'c2Vp'
+
+  #DEFINIR REPOSITÓRIO DE ARMAZENAMENTO DOS ARQUIVOS
+  SEI_REPOSITORIO_ARQUIVOS: "'/sistemas/sei/homologacao'"
+
+  #DEFINIR CONTEXTO E URLS - CASO NAO SAIBA NÃO MODIFICAR
+  SIP_CONTEXTO_LOGIN: "'/sip/login.php'"
+  SIP_CONTEXTO_WSDL: "'/sip/controlador_ws.php?servico=wsdl'"
+  BASE_UPDATE_CONTEXTO_INICIAL_SEI: "'/sei/inicializar.php'"
+  BASE_UPDATE_CONTEXTO_WEB_SERVICE: "'/sei/controlador_ws.php?servico=sip'"
+  SIP_CONTEXTO: "'/sip'"
+  SEI_CONTEXTO: "'/sei'"
+
+  #COLOCAR DEFINIÇÃO DE AMBIENTE PRODUÇÃO
+  SEI_PRODUCAO: "'false'"
+  SIP_PRODUCAO: "'false'"
+
+  #DEFINIÇÃO DE SERVIDOR DE EMAIL
+  EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
