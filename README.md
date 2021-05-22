@@ -237,9 +237,10 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 [linkedin-carlos]: https://www.linkedin.com/in/carlos-lima/
 [github-shield-carlos]: https://img.shields.io/badge/github-carlos-brightgreen.svg?logo=github&style=for-the-badge
 [github-url-carlos]: https://github.com/carlos-lima
-[mail-shield-carlos]: https://img.shields.io/badge/Email-email%40email.com-yellowgreen.svg?logo=mail&style=for-the-badge
+[mail-shield-carlos]: https://img.shields.io/badge/Email-c.lima07%40email.com-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-carlos]: mailto:c.lima07@gmail.com
-[nome-shield-igor]: https://img.shields.io/badge/Nome-Igor%20Jos%C3%A9%20Gomes%20de%20Oliveira-yellowgreen.svg?logo=mail&style=for-the-badge
+[nome-shield-carlos]: https://img.shields.io/badge/Nome-Carlos%20Lima-yellowgreen.svg?logo=mail&style=for-the-badge
+
 
 <!-- IGOR -->
 [linkedin-shield-igor]: https://img.shields.io/badge/linkedin-igor-brightgreen.svg?logo=linkedin&style=for-the-badge
@@ -248,7 +249,7 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 [github-url-igor]: https://github.com/ijgoliveira
 [mail-shield-igor]: https://img.shields.io/badge/Email-igor.oliveira%40tjpe.jus.br-yellowgreen.svg?logo=mail&style=for-the-badge
 [mail-url-igor]: mailto:igor.oliveira@tjpe.jus.br
-[nome-shield-carlos]: https://img.shields.io/badge/Nome-Carlos%20Lima-yellowgreen.svg?logo=mail&style=for-the-badge
+[nome-shield-igor]: https://img.shields.io/badge/Nome-Igor%20Jos%C3%A9%20Gomes%20de%20Oliveira-yellowgreen.svg?logo=mail&style=for-the-badge
 
 [product-screenshot]: images/logo.png
 [project-screenshot]: images/Sei-kubernetes.png
