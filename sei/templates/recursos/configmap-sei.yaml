@@ -13,7 +13,7 @@ data:
   #DEFINIÇÃO DA URL BASE DO SEI
   SEI_SIP_DOMINIO: {{ .Values.sei.SEI_SIP_DOMINIO }}
   #DEFINIÇÃO DE INFORMAÇÕES DO BANCO DO SEI R SIP
-  BANCO_SERVIDOR: {{ .Release.Name }}-{{ .Values.jod.name }}
+  BANCO_SERVIDOR: {{ .Release.Name }}-{{ .Values.mysql.name }}
   BANCO_PORTA: {{ .Values.sei.BANCO_PORTA }}
   SEI_BANCO_NOME: {{ .Values.sei.SEI_BANCO_NOME }}
   SEI_BANCO_USUARIO: {{ .Values.sei.SEI_BANCO_USUARIO }}
