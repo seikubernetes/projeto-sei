@@ -24,7 +24,7 @@ mysql:
   name: mysql
   image: seikubernetes/sei-mysql
   tag: latest
-  defaul_password: "'123'"
+  #defaul_password: "'123'"
   volume: 
     name: volume-mysql
     size: 1Gi
@@ -41,6 +41,8 @@ apache:
     accessMode: ReadWriteOnce  
 
 sei:
+  
+  
   #KUBERNETES OU OPENSHIFT
   AMBIENTE: OPENSHIFT
 
@@ -52,7 +54,17 @@ sei:
   #COLOCAR A URL BASE DO SEI
   SEI_SIP_DOMINIO: "'https://sei.dominio.local'"
   
-  #COLOCAR INFORMAÇÕES DO BANCO DO SEI R SIP
+  #COLOCAR DEFINIÇÃO DE AMBIENTE PRODUÇÃO
+  SEI_PRODUCAO: "'false'"
+  SIP_PRODUCAO: "'false'"
+
+  #DEFINIÇÃO DE SERVIDOR DE EMAIL
+  EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
+  
+  #DEFINIR REPOSITÓRIO DE ARMAZENAMENTO DOS ARQUIVOS
+  SEI_REPOSITORIO_ARQUIVOS: "'/sistemas/sei/homologacao'"
+  
+  #COLOCAR INFORMAÇÕES DO BANCO DO SEI E SIP
   #BANCO_SERVIDOR: "'mysql'"
   BANCO_PORTA: "'3306'"
   SEI_BANCO_NOME: "'sei'"
@@ -62,9 +74,8 @@ sei:
   #SENHAS DEVEM ESTAR EM BASE64
   SEI_BANCO_SENHA: 'c2Vp'
   SIP_BANCO_SENHA: 'c2Vp'
-
-  #DEFINIR REPOSITÓRIO DE ARMAZENAMENTO DOS ARQUIVOS
-  SEI_REPOSITORIO_ARQUIVOS: "'/sistemas/sei/homologacao'"
+  
+  ##########################################################################################################################
 
   #DEFINIR CONTEXTO E URLS - CASO NAO SAIBA NÃO MODIFICAR
   SIP_CONTEXTO_LOGIN: "'/sip/login.php'"
@@ -73,11 +84,3 @@ sei:
   BASE_UPDATE_CONTEXTO_WEB_SERVICE: "'/sei/controlador_ws.php?servico=sip'"
   SIP_CONTEXTO: "'/sip'"
   SEI_CONTEXTO: "'/sei'"
-
-  #COLOCAR DEFINIÇÃO DE AMBIENTE PRODUÇÃO
-  SEI_PRODUCAO: "'false'"
-  SIP_PRODUCAO: "'false'"
-
-  #DEFINIÇÃO DE SERVIDOR DE EMAIL
-  EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
-  
