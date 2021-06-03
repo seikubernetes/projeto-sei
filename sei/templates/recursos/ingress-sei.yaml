@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-ingress
+  namespace: {{.Values.namespace.name}}
+  labels:
+    appglobal: {{ .Release.Name }}
+spec:
+  rules:
+  - host: {{.Values.apache.dominio}}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Release.Name }}-{{ .Values.apache.name }}
+            port:
+              number: 8080
+        pathType: ImplementationSpecific
