@@ -106,6 +106,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
 * [sei-solr](https://hub.docker.com/r/seikubernetes/sei-solr)
 * [sei-mysql](https://hub.docker.com/r/seikubernetes/sei-mysql)
 * [sei-apache](https://hub.docker.com/r/seikubernetes/sei-apache)
+* [memcached](https://hub.docker.com/_/memcached)
 
 ## Instalação <a name="Instalação"></a>
 
