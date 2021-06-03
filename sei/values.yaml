@@ -74,6 +74,7 @@ sei:
   #SENHAS DEVEM ESTAR EM BASE64
   SEI_BANCO_SENHA: 'c2Vp'
   SIP_BANCO_SENHA: 'c2Vp'
+  MYSQL_ROOT_PASSWORD: 'c2Vp'
   
   ##########################################################################################################################
 
