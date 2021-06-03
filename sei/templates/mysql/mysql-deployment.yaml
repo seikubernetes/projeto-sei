@@ -33,9 +33,6 @@ spec:
       {{ end }}
       containers:
         - name: mysql
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              value: {{ .Values.mysql.defaul_password }}
           ports:
             - containerPort: 3306
               protocol: TCP
