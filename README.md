@@ -176,11 +176,11 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contatos <a name="Contatos"></a>
 
-## Marcelo <a name="Marcelo"></a>
-![nome-marcelo][nome-shield-marcelo]
-[![github-marcelo][github-shield-marcelo]][github-url-marcelo]
-[![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
-[![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
+## Carlos <a name="Carlos"></a>
+![nome-carlos][nome-shield-carlos]
+[![github-carlos][github-shield-carlos]][github-url-carlos]
+[![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
+[![Email-carlos][mail-shield-carlos]][mail-url-carlos]
 
 ## Igor <a name="Igor"></a>
 ![nome-igor][nome-shield-igor]
@@ -188,27 +188,11 @@ Distributed under the GLP-3.0. See `LICENSE` for more information.
 [![LinkedIn-Igor][linkedin-shield-igor]][linkedin-igor]
 [![Email-Igor][mail-shield-igor]][mail-url-igor]
 
-## Carlos <a name="Carlos"></a>
-![nome-carlos][nome-shield-carlos]
-[![github-carlos][github-shield-carlos]][github-url-carlos]
-[![LinkedIn-Carlos][linkedin-shield-carlos]][linkedin-carlos]
-[![Email-carlos][mail-shield-carlos]][mail-url-carlos]
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Reconhecimentos <a name="Reconhecimentos"></a>
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
+## Marcelo <a name="Marcelo"></a>
+![nome-marcelo][nome-shield-marcelo]
+[![github-marcelo][github-shield-marcelo]][github-url-marcelo]
+[![LinkedIn-Marcelo][linkedin-shield-marcelo]][linkedin-marcelo]
+[![Email-Marcelo][mail-shield-marcelo]][mail-url-marcelo]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
