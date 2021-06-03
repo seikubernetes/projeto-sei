@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.memcache.name }}
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.memcache.name }}
+    appglobal: {{ .Release.Name }}
+spec:
+  ports:
+    - name: 11211-tcp
+      protocol: TCP
+      port: 11211
+      targetPort: 11211
+  selector:
+    app: {{ .Release.Name }}-{{ .Values.memcache.name }}
+    deployment: {{ .Values.jod.name }}

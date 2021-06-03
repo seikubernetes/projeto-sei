@@ -36,3 +36,4 @@ data:
   #DEFINIÇÃO PARA ACESSO AOS SERVIÇOS
   SOLR_SERVIDOR: http://{{ .Release.Name }}-{{ .Values.solr.name }}:8983/solr
   JODCONVERTER_SERVIDOR: http://{{ .Release.Name }}-{{ .Values.jod.name }}:8080/converter/service
+  MEMCACHE_SERVIDOR: {{ .Release.Name }}-{{ .Values.memcache.name }}
