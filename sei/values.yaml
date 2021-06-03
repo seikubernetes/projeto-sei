@@ -20,6 +20,11 @@ solr:
     size: 1Gi
     accessMode: ReadWriteOnce
 
+memcache:
+  name: memcache
+  image: docker.io/library/memcached
+  tag: 1.6.9
+
 mysql:
   name: mysql
   image: seikubernetes/sei-mysql
@@ -40,8 +45,6 @@ apache:
     accessMode: ReadWriteOnce  
 
 sei:
-  
-  
   #KUBERNETES OU OPENSHIFT
   AMBIENTE: OPENSHIFT
 
