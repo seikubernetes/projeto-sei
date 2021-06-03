@@ -24,7 +24,6 @@ mysql:
   name: mysql
   image: seikubernetes/sei-mysql
   tag: latest
-  #defaul_password: "'123'"
   volume: 
     name: volume-mysql
     size: 1Gi
