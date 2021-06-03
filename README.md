@@ -121,7 +121,7 @@ Todas as imagens foram construídas utilizando como imagem base o projeto Alpine
 4. Configure as variáveis do values.yaml correspondentes ao seu ambiente kubernetes.
 5. Instale o Helm Chart do SEI para criar o ambiente completo baseado nas definições estabelecidadas:
    ```sh
-   helm install projeto-sei .projeto-sei/sei
+   helm install projeto-sei ./projeto-sei/sei
    ```
 
 ## Desinstalação <a name="Desinstalação"></a>
