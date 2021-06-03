@@ -53,7 +53,7 @@ sei:
   SEI_SIP_DOMINIO: "'https://sei.dominio.local'"
   
   #COLOCAR INFORMAÇÕES DO BANCO DO SEI R SIP
-  BANCO_SERVIDOR: "'mysql'"
+  #BANCO_SERVIDOR: "'mysql'"
   BANCO_PORTA: "'3306'"
   SEI_BANCO_NOME: "'sei'"
   SEI_BANCO_USUARIO: "'sei'"
@@ -81,8 +81,3 @@ sei:
   #DEFINIÇÃO DE SERVIDOR DE EMAIL
   EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
   
-  #
-  JODCONVERTER_SERVIDOR: "'jodconverter'"
-  
-  # 
-  SOLR_SERVIDOR: "'solr'"
