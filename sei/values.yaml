@@ -80,3 +80,9 @@ sei:
 
   #DEFINIÇÃO DE SERVIDOR DE EMAIL
   EMAIL_SERVIDOR: "'servidordeemail.dominio.local'"
+  
+  #
+  JODCONVERTER_SERVIDOR: "'jodconverter'"
+  
+  # 
+  SOLR_SERVIDOR: "'solr'"
