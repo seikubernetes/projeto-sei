@@ -26,21 +26,34 @@ spec:
       initContainers:
       - name: change-permissions-{{ .Release.Name }}-{{ .Values.mysql.name }}
         image: busybox:1.28
-        command: ['sh', '-c', "chown -R 0:0 /var/lib/mysql-sei"]
+        command: ['sh', '-c', "chown -R 0:0 /var/lib/mysql"]
         volumeMounts:
           - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
-            mountPath: /var/lib/mysql-sei
+            mountPath: /var/lib/mysql
       {{ end }}
       containers:
         - name: mysql
+          {{ if eq .Values.sei.AMBIENTE "KUBERNETES" }}
+          args: 
+            - '--datadir=/var/lib/mysql'
+          {{ else }}
+          args:
+            - '--datadir=/var/lib/mysql-sei'
+          {{ end }}
           ports:
             - containerPort: 3306
               protocol: TCP
             - containerPort: 33060
               protocol: TCP
+          {{ if eq .Values.sei.AMBIENTE "KUBERNETES" }}
+          volumeMounts:
+            - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
+              mountPath: /var/lib/mysql
+          {{ else }}
           volumeMounts:
             - name: pvc-{{ .Release.Name }}-{{ .Values.mysql.volume.name }}
               mountPath: /var/lib/mysql-sei
+          {{ end }}
           envFrom:
             - configMapRef:
                 name: {{ .Release.Name }}-configmap
