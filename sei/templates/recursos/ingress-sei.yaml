@@ -1,4 +1,5 @@
 {{ if eq .Values.sei.AMBIENTE "KUBERNETES" }}
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-router-infra-css
@@ -18,6 +19,7 @@ spec:
         path: /infra_css
         pathType: ImplementationSpecific
 ---
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-router-infra-js
@@ -37,6 +39,7 @@ spec:
         path: /infra_js
         pathType: ImplementationSpecific
 ---
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-router-sei
@@ -56,6 +59,7 @@ spec:
         path: /sei
         pathType: ImplementationSpecific
 ---
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-router-sip
