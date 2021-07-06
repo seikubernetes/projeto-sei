@@ -1,7 +1,7 @@
 {{ if eq .Values.sei.AMBIENTE "KUBERNETES" }}
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}-ingress
+  name: {{{ .Release.Name }}-router-infra-css
   namespace: {{.Values.namespace.name}}
   labels:
     appglobal: {{ .Release.Name }}
@@ -15,6 +15,64 @@ spec:
             name: {{ .Release.Name }}-{{ .Values.apache.name }}
             port:
               number: 8080
+        path: /infra_css
+        pathType: ImplementationSpecific
+---
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-router-infra-js
+  namespace: {{.Values.namespace.name}}
+  labels:
+    appglobal: {{ .Release.Name }}
+spec:
+  rules:
+  - host: {{.Values.sei.SEI_SIP_DOMINIO}}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Release.Name }}-{{ .Values.apache.name }}
+            port:
+              number: 8080
+        path: /infra_js
+        pathType: ImplementationSpecific
+---
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-router-sei
+  namespace: {{.Values.namespace.name}}
+  labels:
+    appglobal: {{ .Release.Name }}
+spec:
+  rules:
+  - host: {{.Values.sei.SEI_SIP_DOMINIO}}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Release.Name }}-{{ .Values.apache.name }}
+            port:
+              number: 8080
+        path: /sei
+        pathType: ImplementationSpecific
+---
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-router-sip
+  namespace: {{.Values.namespace.name}}
+  labels:
+    appglobal: {{ .Release.Name }}
+spec:
+  rules:
+  - host: {{.Values.sei.SEI_SIP_DOMINIO}}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Release.Name }}-{{ .Values.apache.name }}
+            port:
+              number: 8080
+        path: /sip
         pathType: ImplementationSpecific
 {{ end }}
 {{ if eq .Values.sei.AMBIENTE "OPENSHIFT" }}
