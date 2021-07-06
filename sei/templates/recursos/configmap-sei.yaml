@@ -11,7 +11,7 @@ data:
   SIGLA_ORGAO: {{ .Values.sei.SIGLA_ORGAO }}
   SEI_NOME_SISTEMA_COMPLETO: {{ .Values.sei.SEI_NOME_SISTEMA_COMPLETO }}
   #DEFINIÇÃO DA URL BASE DO SEI
-  SEI_SIP_DOMINIO: {{ .Values.sei.SEI_SIP_DOMINIO }}
+  SEI_SIP_DOMINIO: https://{{ .Values.sei.SEI_SIP_DOMINIO }}
   #DEFINIÇÃO DE INFORMAÇÕES DO BANCO DO SEI R SIP
   BANCO_SERVIDOR: {{ .Release.Name }}-{{ .Values.mysql.name }}
   BANCO_PORTA: {{ .Values.sei.BANCO_PORTA }}
