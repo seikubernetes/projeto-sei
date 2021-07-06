@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1
+{{ if eq .Values.sei.AMBIENTE "KUBERNETES" }}
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-ingress
@@ -7,7 +7,7 @@ metadata:
     appglobal: {{ .Release.Name }}
 spec:
   rules:
-  - host: {{.Values.apache.dominio}}
+  - host: {{.Values.sei.SEI_SIP_DOMINIO}}
     http:
       paths:
       - backend:
@@ -15,4 +15,97 @@ spec:
             name: {{ .Release.Name }}-{{ .Values.apache.name }}
             port:
               number: 8080
-        pathType: ImplementationSpecific
+{{end}}
+{{ if eq .Values.sei.AMBIENTE "OPENSHIFT" }}
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    haproxy.router.openshift.io/timeout: 5m
+  name: {{ .Release.Name }}-router-infra-css
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+spec:
+  host: {{ .Values.sei.SEI_SIP_DOMINIO }}
+  path: /infra_css
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-{{ .Values.apache.name }}
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    haproxy.router.openshift.io/timeout: 5m
+  name: {{ .Release.Name }}-router-infra-js
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+spec:
+  host: {{ .Values.sei.SEI_SIP_DOMINIO }}
+  path: /infra_js
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-{{ .Values.apache.name }}
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    haproxy.router.openshift.io/timeout: 5m
+  name: {{ .Release.Name }}-router-sei
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+spec:
+  host: {{ .Values.sei.SEI_SIP_DOMINIO }}
+  path: /sei
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-{{ .Values.apache.name }}
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    haproxy.router.openshift.io/timeout: 5m
+  name: {{ .Release.Name }}-router-sip
+  namespace: {{.Values.namespace.name}}
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.apache.name }}
+spec:
+  host: {{ .Values.sei.SEI_SIP_DOMINIO }}
+  path: /sip
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-{{ .Values.apache.name }}
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+{{end}}
