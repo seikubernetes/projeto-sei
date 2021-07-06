@@ -23,7 +23,7 @@ solr:
 memcache:
   name: memcache
   image: docker.io/library/memcached
-  tag: 1.6.9
+  tag: 1.5.22
 
 mysql:
   name: mysql
