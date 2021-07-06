@@ -15,7 +15,8 @@ spec:
             name: {{ .Release.Name }}-{{ .Values.apache.name }}
             port:
               number: 8080
-{{end}}
+        pathType: ImplementationSpecific
+{{ end }}
 {{ if eq .Values.sei.AMBIENTE "OPENSHIFT" }}
 kind: Route
 apiVersion: route.openshift.io/v1
@@ -108,4 +109,4 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
-{{end}}
+{{ end }}
