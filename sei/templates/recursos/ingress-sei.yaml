@@ -1,7 +1,7 @@
 {{ if eq .Values.sei.AMBIENTE "KUBERNETES" }}
 kind: Ingress
 metadata:
-  name: {{{ .Release.Name }}-router-infra-css
+  name: {{ .Release.Name }}-router-infra-css
   namespace: {{.Values.namespace.name}}
   labels:
     appglobal: {{ .Release.Name }}
