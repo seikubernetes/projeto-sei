@@ -38,8 +38,6 @@ apache:
   name: apache
   image: seikubernetes/sei-apache
   tag: latest
-  router: dominio.local
-  dominio: dominio.local
   volume: 
     name: volume-apache
     size: 1Gi
