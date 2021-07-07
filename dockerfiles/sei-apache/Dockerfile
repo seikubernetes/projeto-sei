@@ -18,27 +18,21 @@ WORKDIR /var/www/html
 ## Atividades com root
 USER root
 
-## Reativa todos os idiomas no locale. 
-RUN sed -i '/^override_install_langs=/d' /etc/yum.conf && \
-    yum reinstall -y glibc-common
-
 ## Instalacao de pacotes necessarios
-RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
-    http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
-    yum-config-manager --enable remi-php56 && \
+RUN sed -i '/^override_install_langs=/d' /etc/yum.conf && yum reinstall -y glibc-common && \
+    yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
+    http://rpms.remirepo.net/enterprise/remi-release-7.rpm && yum-config-manager --enable remi-php56 && \
     yum -y install java-1.8.0-openjdk libXext libXrender git unzip wget openssl dejavu-fonts-common \
-    dejavu-sans-mono-fonts liberation-serif-fonts xorg-x11-font-utils fontconfig \
-    fontpackages-filesystem liberation-fonts-common libfonts dejavu-sans-fonts \
-    dejavu-serif-fonts liberation-mono-fonts google-crosextra-carlito-fonts \
-    google-crosextra-caladea-fonts urw-fonts libfontenc libXfont \
-    xorg-x11-fonts-Type1 liberation-sans-fonts libreoffice-opensymbol-fonts \
-    httpd php php-common php-cli php-pear php-bcmath \
-    php-gd php-gmp php-imap php-intl php-ldap php-mbstring php-mysqli php-odbc php-pdo \
+    dejavu-sans-mono-fonts liberation-serif-fonts xorg-x11-font-utils fontconfig fontpackages-filesystem \
+    liberation-fonts-common libfonts dejavu-sans-fonts dejavu-serif-fonts liberation-mono-fonts \
+    google-crosextra-carlito-fonts google-crosextra-caladea-fonts urw-fonts libfontenc libXfont \
+    xorg-x11-fonts-Type1 liberation-sans-fonts libreoffice-opensymbol-fonts httpd php php-common php-cli \
+    php-pear php-bcmath php-gd php-gmp php-imap php-intl php-ldap php-mbstring php-mysqli php-odbc php-pdo \
     php-pecl-apc php-pspell php-zlib php-snmp php-soap php-xml php-xmlrpc php-zts php-devel \
-    php-pecl-apc-devel php-pecl-memcache php-calendar php-shmop php-intl php-mcrypt \
-    php-pecl-xdebug php56-php-dba php56-php-enchant php56-php-pecl-mongo php56-php-pgsql \
-    php56-php-opcache php56-php-fpm php56-php-dbg php56-php-embedded php56-runtime \
-    php56-php-recode php56-scldevel && yum clean all -y && rm -rf /var/cache/yum
+    php-pecl-apc-devel php-pecl-memcache php-calendar php-shmop php-intl php-mcrypt php-pecl-xdebug \
+    php56-php-dba php56-php-enchant php56-php-pecl-mongo php56-php-pgsql php56-php-opcache php56-php-fpm \
+    php56-php-dbg php56-php-embedded php56-runtime php56-php-recode php56-scldevel && \
+    yum clean all -y && rm -rf /var/cache/yum
 
 ## Configuracao necessaria
 RUN chmod 777 /run/httpd /var/lib/php/session && \
@@ -73,7 +67,7 @@ RUN chown -R 48:0 ${HOME} /run/httpd \
     chmod -R ug+rwx ${HOME} /run/httpd \
     /etc/pki/ca-trust
 
-## Atividades com o usuario default (id 1001)
+## Atividades com o usuario default (id 48)
 USER 48
 
 CMD ["httpd", "-D",  "FOREGROUND"]
