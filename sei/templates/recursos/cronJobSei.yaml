@@ -5,6 +5,7 @@ metadata:
   namespace: {{.Values.namespace.name}}
   labels:
     cronjob: {{ .Release.Name }}-cronjob-sei-tarefa
+    appglobal: {{ .Release.Name }}
 spec:
   schedule: '0,30 * * * *'
   concurrencyPolicy: Forbid
@@ -59,6 +60,7 @@ metadata:
   namespace: {{.Values.namespace.name}}
   labels:
     cronjob: {{ .Release.Name }}-cronjob-sip-tarefa
+    appglobal: {{ .Release.Name }}
 spec:
   schedule: '0,30 * * * *'
   concurrencyPolicy: Forbid
