@@ -31,7 +31,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     fontpackages-filesystem liberation-fonts-common libfonts dejavu-sans-fonts \
     dejavu-serif-fonts liberation-mono-fonts google-crosextra-carlito-fonts \
     google-crosextra-caladea-fonts urw-fonts libfontenc libXfont \
-    xorg-x11-fonts-Type1 liberation-sans-fonts libreoffice-opensymbol-fonts
+    xorg-x11-fonts-Type1 liberation-sans-fonts libreoffice-opensymbol-fonts \
     httpd php php-common php-cli php-pear php-bcmath \
     php-gd php-gmp php-imap php-intl php-ldap php-mbstring php-mysqli php-odbc php-pdo \
     php-pecl-apc php-pspell php-zlib php-snmp php-soap php-xml php-xmlrpc php-zts php-devel \
