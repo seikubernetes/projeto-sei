@@ -6,7 +6,6 @@ metadata:
   labels:
     app: {{ .Release.Name }}-{{ .Values.apache.name }}
     appglobal: {{ .Release.Name }}
-    router: {{ .Values.apache.router }}
 spec:
   ports:
     - name: 8080-tcp
