@@ -51,3 +51,57 @@ spec:
           schedulerName: default-scheduler
   successfulJobsHistoryLimit: 5
   failedJobsHistoryLimit: 5
+---
+kind: CronJob
+apiVersion: batch/v1beta1
+metadata:
+  name: {{ .Release.Name }}-cronjob-sip-tarefa
+  namespace: {{.Values.namespace.name}}
+  labels:
+    cronjob: {{ .Release.Name }}-cronjob-sip-tarefa
+spec:
+  schedule: '0,30 * * * *'
+  concurrencyPolicy: Forbid
+  suspend: false
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+    spec:
+      backoffLimit: 0
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          volumes:
+            - name: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
+              persistentVolumeClaim:
+                claimName: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
+          containers:
+            - resources: {}
+              terminationMessagePath: /dev/termination-log
+              name: {{ .Release.Name }}-cronjob-sip-tarefa
+              command:
+                - /bin/bash
+                - '-c'
+                - >-
+                  php -c /etc/php.ini /var/www/html/sip/scripts/AgendamentoTarefaSip.php
+              imagePullPolicy: Always
+              volumeMounts:
+                - name: pvc-{{ .Release.Name }}-{{ .Values.apache.volume.name }}
+                  mountPath: {{ .Values.sei.SEI_REPOSITORIO_ARQUIVOS }}
+              terminationMessagePolicy: File
+              envFrom:
+                - configMapRef:
+                    name: {{ .Release.Name }}-configmap
+                - secretRef:
+                    name: {{ .Release.Name }}-secret
+              image: >-
+                docker.io/seikubernetes/sei-apache:latest
+          restartPolicy: Never
+          terminationGracePeriodSeconds: 30
+          activeDeadlineSeconds: 7200
+          dnsPolicy: ClusterFirst
+          securityContext: {}
+          schedulerName: default-scheduler
+  successfulJobsHistoryLimit: 5
+  failedJobsHistoryLimit: 5
