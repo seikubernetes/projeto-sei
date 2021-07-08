@@ -71,6 +71,7 @@ As tecnologias utilizadas no ambiente foram:
 * [Docker](https://www.docker.com/)
 * [Podman](https://podman.io/)
 * [Alpine](https://alpinelinux.org/)
+* [Centos](https://centos.org/)
 
 <!-- Começando -->
 ## Começando <a name="Começando"></a>
@@ -81,7 +82,7 @@ Nesta sessão iremos demostrar a arquitetura e o processo de instalação e desi
 
 A arquitetura do projeto SEI Kubernetes é composta pelos seguintes containers:<br>
 * Banco de dados Mysql
-* Serviço Jodconverter
+* Serviço de conversão para pdf Jodconverter
 * Serviço Web Apache+PHP+Memcached
 * Serviço de indexação Solr
 
@@ -99,8 +100,6 @@ O Helm deve ser instalado:
   ```
 
 ## Imagens <a name="Imagens"></a>
-
-Todas as imagens foram construídas utilizando como imagem base o projeto Alpinelinux:
 
 * [sei-jodconverter](https://hub.docker.com/r/seikubernetes/sei-jodconverter)
 * [sei-solr](https://hub.docker.com/r/seikubernetes/sei-solr)
